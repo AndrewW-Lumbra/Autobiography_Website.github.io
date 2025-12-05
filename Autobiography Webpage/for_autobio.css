@@ -1,0 +1,43 @@
+/* Minimal, simple stylesheet for the autobiography page */
+
+:root{
+  --text:#222;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, Helvetica, sans-serif;color:var(--text);background:#f6f7fb}
+
+.topbar{height:60px}
+
+.hero{
+  position:relative;
+  height:320px;
+  background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.2)), url('for_background.png') center/cover no-repeat;
+  display:flex;align-items:flex-end;padding:28px 16px;color:#fff;
+}
+.hero .wrap{max-width:1000px;margin:0 auto;position:relative;width:100%}
+.profile-circle{position:absolute;left:32px;bottom:-56px;width:120px;height:120px;border-radius:50%;overflow:hidden;border:5px solid #fff}
+.profile-circle img{width:100%;height:100%;object-fit:cover}
+.hero-text{margin-left:170px}
+.hero h1{margin:0;font-size:28px}
+.lead{margin:6px 0 0;font-size:13px;opacity:0.95}
+
+.container{max-width:1000px;margin:64px auto;padding:0 16px}
+h1{font-size:20px;margin:0 0 10px}
+h3{font-weight:400;line-height:1.6;color:var(--muted)}
+
+/* Table styles - clean and sleek */
+.edu-table{width:100%;border-collapse:collapse;margin:16px 0}
+.edu-table th{background:#f0f0f0;padding:12px;text-align:left;font-weight:600;border-bottom:2px solid #ddd;font-size:14px}
+.edu-table td{padding:12px;border-bottom:1px solid #eee;font-size:14px}
+.edu-table tbody tr:nth-child(even){background:#fafafa}
+.edu-table tbody tr:hover{background:#f5f5f5}
+
+/* Divider lines between sections */
+hr{border:none;border-top:1px solid #ddd;margin:28px 0;opacity:0.6}
+
+@media (max-width:640px){
+  .profile-circle{position:static;margin:0 auto;transform:translateY(40px)}
+  .hero-text{margin:80px 0 0;text-align:center}
+}
